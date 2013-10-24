@@ -34,6 +34,9 @@ body {
 .large-bg {
     background-image: url(../img/large-bg.jpg);
     background-size: 100%;
+    transition: none;
+    -o-transition: none;
+    -webkit-transition: none;
 }
 
 .text {

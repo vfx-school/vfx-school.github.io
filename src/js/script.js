@@ -1,11 +1,19 @@
 $(function() {
-
-    var touchSupported = (('ontouchstart' in window) ||
-        window.DocumentTouch && document instanceof DocumentTouch);
-
     var SIGNUP = "#signup";
-
     var currentPage = 1;
+
+    var handHeld = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent);
+
+    var adjustScroll = function(scrolled) {
+        $('.large-bg').css('background-position', '0px ' + scrolled + 'px');
+    }
+
+    var s = skrollr.init({
+        "beforerender": function(data) {
+            adjustScroll(data.curTop);
+        },
+        "smoothScrolling": true
+    });
 
     $('#body').on('activate.bs.scrollspy', function (e) {
         var tab = $(e.target);
@@ -22,9 +30,7 @@ $(function() {
         $('html,body').animate({scrollTop: $(pageId).offset().top}, 'slow');
     }
 
-    var parallax = function(scrolled) {
-        $('.large-bg').css('background-position', '0px ' + scrolled + 'px');
-    }
+
 
     $(".navbar-nav > li > a").each(function(index, element) {
         element = $(element);
@@ -36,19 +42,21 @@ $(function() {
             history.pushState({ path: this.path }, '', this.href)
         }}(hash));
 
-        var li = element.parent();
-        li.hover(
-            function(element) {return function() {
-                element.addClass("active");
-            }}(li),
+        if(!handHeld) {
+            var li = element.parent();
+            li.hover(
+                function(element) {return function() {
+                    element.addClass("active");
+                }}(li),
 
-            function(element) {return function() {
-                var pageNumber = element.data("x-page");
-                if(pageNumber != currentPage) {
-                    element.removeClass("active");
-                }
-            }}(li)
-        );
+                function(element) {return function() {
+                    var pageNumber = element.data("x-page");
+                    if(pageNumber != currentPage) {
+                        element.removeClass("active");
+                    }
+                }}(li)
+            );
+        }
     });
 
     $(".signup-button").click(function(e) {
@@ -56,20 +64,5 @@ $(function() {
         return scrollTo(SIGNUP);
     });
 
-    if (touchSupported) {
-        $(window).bind('touchmove', function(e) {
-            var val = e.currentTarget.scrollY;
-            parallax(val);
-
-            $('[data-spy="scroll"]').each(function () {
-                var $spy = $(this).scrollspy('refresh')
-            })
-        });
-    }
-
-    $(window).bind('scroll', function(e) {
-        var val = $(this).scrollTop();
-        parallax(val);
-    });
 });
 

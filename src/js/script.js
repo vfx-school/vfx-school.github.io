@@ -1,4 +1,8 @@
 $(function() {
+
+    var touchSupported = (('ontouchstart' in window) ||
+        window.DocumentTouch && document instanceof DocumentTouch);
+
     var SIGNUP = "#signup";
 
     var currentPage = 1;
@@ -18,8 +22,7 @@ $(function() {
         $('html,body').animate({scrollTop: $(pageId).offset().top}, 'slow');
     }
 
-    var parallax = function() {
-        var scrolled = $(window).scrollTop();
+    var parallax = function(scrolled) {
         $('.large-bg').css('background-position', '0px ' + scrolled + 'px');
     }
 
@@ -53,8 +56,20 @@ $(function() {
         return scrollTo(SIGNUP);
     });
 
-    $(window).scroll(function(e){
-        parallax();
+    if (touchSupported) {
+        $(window).bind('touchmove', function(e) {
+            var val = e.currentTarget.scrollY;
+            parallax(val);
+
+            $('[data-spy="scroll"]').each(function () {
+                var $spy = $(this).scrollspy('refresh')
+            })
+        });
+    }
+
+    $(window).bind('scroll', function(e) {
+        var val = $(this).scrollTop();
+        parallax(val);
     });
 });
 

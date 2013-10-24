@@ -25,6 +25,7 @@ $(function() {
         element.click(function(hash) {return function(e) {
             e.preventDefault();
             scrollTo(hash);
+            history.pushState({ path: this.path }, '', this.href)
         }}(hash));
 
         var li = element.parent();

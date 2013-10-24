@@ -16,7 +16,7 @@ body {
 }
 
 .row:not(.schedule-row .row) {
-    padding-top: 70px;
+    padding-top: 7em;
 }
 
 .page {

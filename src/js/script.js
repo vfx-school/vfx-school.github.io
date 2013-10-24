@@ -9,4 +9,4 @@ var activatePage = function(pageNumber) {
     currentPage = pageNumber;
 }
 
-activatePage(currentPage);
+activatePage(1);

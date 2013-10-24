@@ -12,10 +12,9 @@ h2, .h2 {
     font-size: 26px;
 }
 
+
+
 body {
-    transition: 0.5s ease;
-    -o-transition: 0.5s ease;
-    -webkit-transition: 0.5s ease;
     font-family:  Helvetica, sans-serif, Arial;
     color: #F6EDDF;
 }
@@ -65,12 +64,6 @@ body {
     padding-top: 2em;
 }
 
-@media (min-width: 768px) {
-    .page {
-        min-height: 800px;
-    }
-}
-
 .navbar .container, .navbar li {
     height: 5em;
 }
@@ -87,10 +80,6 @@ body {
     height: 0px;
     width: 100%;
     z-index: -1;
-
-    transition: 0.5s ease;
-    -o-transition: 0.5s ease;
-    -webkit-transition: 0.5s ease;
 }
 
 .navbar-default .navbar-nav > li.active > .hover {
@@ -144,4 +133,22 @@ body {
 
 .schedule-row {
     border-top: dashed black 1px;
+}
+
+@media (min-width: 1220px) {
+    .page {
+        min-height: 800px;
+    }
+
+    body {
+        transition: 0.5s ease;
+        -o-transition: 0.5s ease;
+        -webkit-transition: 0.5s ease;
+    }
+
+    .navbar-default .navbar-nav > li > .hover {
+        transition: 0.5s ease;
+        -o-transition: 0.5s ease;
+        -webkit-transition: 0.5s ease;
+    }
 }

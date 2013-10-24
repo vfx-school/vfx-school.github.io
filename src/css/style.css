@@ -5,7 +5,11 @@ span.rur span { position: absolute; overflow: hidden; width: .45em; height: 1em;
 span.rur span:before { content: '\2013'; }
 
 h1, .h1 {
-    font-size: 33px;
+    font-size: 30px;
+}
+
+h2, .h2 {
+    font-size: 26px;
 }
 
 body {
@@ -16,6 +20,10 @@ body {
     color: #F6EDDF;
 }
 
+.input-group-addon {
+    color: darkgrey;
+}
+
 .navbar-default {
     background-color: inherit;
     color: #f4e6d6;
@@ -23,12 +31,16 @@ body {
     font-size: 14pt;
 }
 
+.large-bg {
+    background-image: url(../img/W7FHCw5874Q.jpg);
+}
+
 .text {
-    font-size: 12pt;
+    font-size: 14pt;
 }
 
 .bigger-text {
-    font-size: 15pt;
+    font-size: 16pt;
 }
 
 .row:not(.schedule-row .row) {
@@ -38,11 +50,11 @@ body {
 .page {
     width: 100%;
     max-width: none;
-    padding-top: 10em;
+    padding-top: 7em;
     padding-bottom: 70px;
 }
 
-.page > .row {
+.page > .row, .page > .large-bg > .row {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -55,9 +67,12 @@ body {
     }
 }
 
-.navbar .container {
+.navbar .container, .navbar li {
     height: 4em;
-    border-bottom: solid black 1px;
+}
+
+.navbar li a {
+    padding-top: 2em;
 }
 
 .navbar-default .navbar-nav > li > .hover {

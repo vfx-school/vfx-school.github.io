@@ -78,6 +78,8 @@ $(function() {
         map.controls.add(
             new ymaps.control.ZoomControl()
         );
+
+        location.balloon.open();
     });
 
 });

@@ -5,10 +5,6 @@ $(function() {
 
     $('#body').on('activate.bs.scrollspy', function (e) {
         var tab = $(e.target);
-
-        console.log("spied: ", tab);
-
-        //highlightPage(tab);
         activatePage(tab.data("x-page"));
     });
 
@@ -17,13 +13,9 @@ $(function() {
         currentPage = pageNumber;
     }
 
-    /*var highlightPage = function(tab) {
-        tab.addClass("active");
-    }*/
 
     var scrollTo = function(pageId) {
         $('html,body').animate({scrollTop: $(pageId).offset().top}, 'slow');
-        return false;
     }
 
     $(".navbar-nav > li > a").each(function(index, element) {
@@ -32,8 +24,22 @@ $(function() {
 
         element.click(function(hash) {return function(e) {
             e.preventDefault();
-            return scrollTo(hash);
+            scrollTo(hash);
         }}(hash));
+
+        var li = element.parent();
+        li.hover(
+            function(element) {return function() {
+                element.addClass("active");
+            }}(li),
+
+            function(element) {return function() {
+                var pageNumber = element.data("x-page");
+                if(pageNumber != currentPage) {
+                    element.removeClass("active");
+                }
+            }}(li)
+        );
     });
 
     $(".signup-button").click(function(e) {

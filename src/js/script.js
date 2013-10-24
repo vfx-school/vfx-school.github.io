@@ -18,6 +18,11 @@ $(function() {
         $('html,body').animate({scrollTop: $(pageId).offset().top}, 'slow');
     }
 
+    var parallax = function() {
+        var scrolled = $(window).scrollTop();
+        $('.large-bg').css('background-position', '0px ' + scrolled + 'px');
+    }
+
     $(".navbar-nav > li > a").each(function(index, element) {
         element = $(element);
         var hash = element[0].hash;
@@ -46,6 +51,10 @@ $(function() {
     $(".signup-button").click(function(e) {
         e.preventDefault();
         return scrollTo(SIGNUP);
+    });
+
+    $(window).scroll(function(e){
+        parallax();
     });
 });
 

@@ -32,7 +32,8 @@ body {
 }
 
 .large-bg {
-    background-image: url(../img/W7FHCw5874Q.jpg);
+    background-image: url(../img/large-bg.jpg);
+    background-size: 100%;
 }
 
 .text {
@@ -68,11 +69,11 @@ body {
 }
 
 .navbar .container, .navbar li {
-    height: 4em;
+    height: 5em;
 }
 
 .navbar li a {
-    padding-top: 2em;
+    padding-top: 3em;
 }
 
 .navbar-default .navbar-nav > li > .hover {

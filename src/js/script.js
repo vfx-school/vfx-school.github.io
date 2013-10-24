@@ -63,5 +63,22 @@ $(function() {
         });
     }
 
+    ymaps.ready(function() {
+        var map = new ymaps.Map ("map", {
+            center: [59.945035, 30.270128],
+            zoom: 16
+        });
+
+        var location = new ymaps.Placemark(
+            [59.945035, 30.270128],
+            {hintContent: "vfx-school", balloonContent: "<b>Факультет Искусств СПБГУ</b><br/>Россия, Санкт-Петербург, В.О.,10 линия, д. 49"}
+        );
+
+        map.geoObjects.add(location);
+        map.controls.add(
+            new ymaps.control.ZoomControl()
+        );
+    });
+
 });
 

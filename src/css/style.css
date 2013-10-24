@@ -186,16 +186,7 @@ footer, .footer {
     }
 }
 
-.fluid-wrapper {
-    position: relative;
-    padding-bottom: 100%;
-    height: 0;
-}
-.fluid-wrapper iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    border: none;
+#map {
+    min-height: 500px;
+    color: black;
 }

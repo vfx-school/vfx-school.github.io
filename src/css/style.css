@@ -4,37 +4,60 @@ span.rur { font-family: "Rubl Sign"; text-transform: uppercase; // text-transfor
 span.rur span { position: absolute; overflow: hidden; width: .45em; height: 1em; margin: .1ex 0 0 -.55em; // display: none; }
 span.rur span:before { content: '\2013'; }
 
+h1, .h1 {
+    font-size: 33px;
+}
+
 body {
     transition: 0.5s ease;
     -o-transition: 0.5s ease;
     -webkit-transition: 0.5s ease;
+    font-family:  Helvetica, sans-serif, Arial;
+    color: #F6EDDF;
 }
 
 .navbar-default {
     background-color: inherit;
+    color: #f4e6d6;
     border: none;
+    font-size: 14pt;
+}
+
+.text {
+    font-size: 12pt;
+}
+
+.bigger-text {
+    font-size: 15pt;
 }
 
 .row:not(.schedule-row .row) {
-    padding-top: 7em;
+    padding-top: 15em;
 }
 
 .page {
     width: 100%;
     max-width: none;
-    padding-top: 70px;
+    padding-top: 10em;
     padding-bottom: 70px;
 }
 
 .page > .row {
     margin-left: auto;
     margin-right: auto;
+    text-align: center;
+    padding-top: 2em;
 }
 
 @media (min-width: 768px) {
     .page {
         min-height: 800px;
     }
+}
+
+.navbar .container {
+    height: 4em;
+    border-bottom: solid black 1px;
 }
 
 .navbar-default .navbar-nav > li > .hover {
@@ -57,6 +80,7 @@ body {
 
 .navbar-default .navbar-nav > li > a {
     background-color: transparent !important;
+    color: #F6EDDF !important;
 }
 
 .page-1 {
@@ -76,11 +100,11 @@ body {
 }
 
 .page-3 {
-    background-color: #bea37e;
+    background-color: #ac916c;
 }
 
 .page-3 .navbar-default .navbar-nav > li> .hover {
-    background-color: #ae936e;
+    background-color: #9c815c;
 }
 
 .page-4 {

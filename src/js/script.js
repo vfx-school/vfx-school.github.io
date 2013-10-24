@@ -1,20 +1,28 @@
 $(function() {
-    var SCROLL_DURATION = 500;
+    var SIGNUP = "#signup";
+
     var currentPage = 1;
 
     $('#body').on('activate.bs.scrollspy', function (e) {
-        activatePage($(e.target).data("x-page"));
+        var tab = $(e.target);
+
+        console.log("spied: ", tab);
+
+        //highlightPage(tab);
+        activatePage(tab.data("x-page"));
     });
 
     var activatePage = function(pageNumber) {
-        $('#body').removeClass("page-" + currentPage).addClass("page-" + pageNumber);
+        $('body').removeClass("page-" + currentPage).addClass("page-" + pageNumber);
         currentPage = pageNumber;
     }
 
-    activatePage(currentPage);
+    /*var highlightPage = function(tab) {
+        tab.addClass("active");
+    }*/
 
     var scrollTo = function(pageId) {
-        $.scrollTo($(pageId), SCROLL_DURATION);
+        $('html,body').animate({scrollTop: $(pageId).offset().top}, 'slow');
         return false;
     }
 
@@ -26,6 +34,11 @@ $(function() {
             e.preventDefault();
             return scrollTo(hash);
         }}(hash));
+    });
+
+    $(".signup-button").click(function(e) {
+        e.preventDefault();
+        return scrollTo(SIGNUP);
     });
 });
 

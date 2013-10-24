@@ -4,6 +4,11 @@ span.rur { font-family: "Rubl Sign"; text-transform: uppercase; // text-transfor
 span.rur span { position: absolute; overflow: hidden; width: .45em; height: 1em; margin: .1ex 0 0 -.55em; // display: none; }
 span.rur span:before { content: '\2013'; }
 
+body {
+    transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
+}
 
 .navbar-default {
     background-color: inherit;
@@ -32,44 +37,66 @@ span.rur span:before { content: '\2013'; }
     }
 }
 
-.page-1 {
-    background-color: #334D5C;
+.navbar-default .navbar-nav > li > .hover {
+    position: absolute;
+    left: 0;
+    display: block;
+    top: 0;
+    height: 0px;
+    width: 100%;
+    z-index: -1;
+
+    transition: 0.5s ease;
+    -o-transition: 0.5s ease;
+    -webkit-transition: 0.5s ease;
 }
 
-.page-1 .navbar-default .navbar-nav > .active > a {
-    background-color: #233D4C;
+.navbar-default .navbar-nav > li.active > .hover {
+    height: 100%;
+}
+
+.navbar-default .navbar-nav > li > a {
+    background-color: transparent !important;
+}
+
+.page-1 {
+    background-color: #a45958;
+}
+
+.page-1 .navbar-default .navbar-nav > li > .hover {
+    background-color: #944948;
 }
 
 .page-2 {
-    background-color: #45B29D;
+    background-color: #987474;
 }
 
-.page-2 .navbar-default .navbar-nav > .active > a {
-    background-color: #35A28D;
+.page-2 .navbar-default .navbar-nav > li > .hover {
+    background-color: #776464;
 }
 
 .page-3 {
-    background-color: #EFC94C;
+    background-color: #bea37e;
 }
 
-.page-3 .navbar-default .navbar-nav > .active > a {
-    background-color: #DFB93C;
+.page-3 .navbar-default .navbar-nav > li> .hover {
+    background-color: #ae936e;
 }
 
 .page-4 {
-    background-color: #E27A3F;
+    background-color: #5c7b7f;
 }
 
-.page-4 .navbar-default .navbar-nav > .active > a {
-    background-color: #D26A2F;
+.page-4 .navbar-default .navbar-nav > li > .hover {
+    background-color: #4c6b6f;
 }
 
 .page-5 {
-    background-color: #DF5A49;
+    background-color: #8b9076;
 }
 
-.page-5 .navbar-default .navbar-nav > .active > a {
-    background-color: #CF4A39;
+.page-5 .navbar-default .navbar-nav > li > .hover {
+    background-color: #7b8066;
 }
 
 .schedule-row {

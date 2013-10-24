@@ -8,13 +8,6 @@ $(function() {
         $('.large-bg').css('background-position', '0px ' + scrolled + 'px');
     }
 
-    var s = skrollr.init({
-        "beforerender": function(data) {
-            adjustScroll(data.curTop);
-        },
-        "smoothScrolling": true
-    });
-
     $('#body').on('activate.bs.scrollspy', function (e) {
         var tab = $(e.target);
         activatePage(tab.data("x-page"));
@@ -29,7 +22,6 @@ $(function() {
     var scrollTo = function(pageId) {
         $('html,body').animate({scrollTop: $(pageId).offset().top}, 'slow');
     }
-
 
 
     $(".navbar-nav > li > a").each(function(index, element) {
@@ -63,6 +55,13 @@ $(function() {
         e.preventDefault();
         return scrollTo(SIGNUP);
     });
+
+    if(!handHeld) {
+        $(window).bind('scroll', function(e) {
+            var val = $(this).scrollTop();
+            adjustScroll(val);
+        });
+    }
 
 });
 

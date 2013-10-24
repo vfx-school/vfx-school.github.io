@@ -22,11 +22,6 @@ body {
     color: #F6EDDF;
 }
 
-footer, .footer {
-    border-top: dashed black 1px;
-    padding-top: 2em;
-}
-
 .input-group-addon {
     color: darkgrey;
 }
@@ -189,4 +184,9 @@ footer, .footer {
 #map {
     height: 500px;
     color: black;
+}
+
+.company-logo {
+    height: 4em;
+    width: auto;
 }

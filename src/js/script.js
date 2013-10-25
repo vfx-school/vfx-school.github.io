@@ -82,5 +82,13 @@ $(function() {
         location.balloon.open();
     });
 
+    var resizeCircles = function() {
+        var cw = $('.circled, .encircled').outerWidth();
+        $('.circled, .encircled').css({'height':cw+'px'});
+    }
+
+
+    $(window).resize(resizeCircles);
+    resizeCircles();
 });
 

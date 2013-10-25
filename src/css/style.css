@@ -1,9 +1,3 @@
-@font-face { font-family: "Rubl Sign"; src: url(http://www.artlebedev.ru/;-)/ruble.eot); }
-
-span.rur { font-family: "Rubl Sign"; text-transform: uppercase; // text-transform: none;}
-span.rur span { position: absolute; overflow: hidden; width: .45em; height: 1em; margin: .1ex 0 0 -.55em; // display: none; }
-span.rur span:before { content: '\2013'; }
-
 h1, .h1 {
     font-size: 30px;
 }
@@ -193,4 +187,52 @@ body {
 .company-logo {
     height: 4em;
     width: auto;
+}
+
+.centered {
+    margin-left:auto;
+    margin-right:auto;
+}
+
+.circled {
+    font-size: 12pt;
+    width: 100%;
+    max-width: 5em;
+    border-radius: 50%;
+    background-color: #5c7b7f;
+    vertical-align: middle;
+    display: table-cell;
+}
+
+.encircled {
+    width: 100%;
+    max-width: 5em;
+    border-radius: 50%;
+    border: solid #F6EDDF 2px;
+    vertical-align: middle;
+    display: table-cell;
+    padding: 0px;
+}
+
+@media(min-width: 1220px) {
+    .circled {
+        font-size: 14pt;
+    }
+}
+
+.circled > p, .encircled > img {
+    padding: 1.2em;
+    margin-bottom: 0px;
+}
+
+.vk, .twitter {
+    padding: 1em !important;
+}
+
+.pad-bottom {
+    padding-bottom: 2em;
+}
+
+.pad-top {
+    padding-top: 4em !important;
 }

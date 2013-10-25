@@ -1,17 +1,17 @@
 h1, .h1 {
-    font-size: 30px;
+    font-size: 22pt;
 }
 
 h2, .h2 {
-    font-size: 26px;
+    font-size: 19pt;
 }
 
 h3, .h3 {
-    font-size: 20px;
+    font-size: 16pt;
 }
 
 .page-2 .h3, .page-2 h3, .page-2 .h2, .page-2 h2 {
-    margin-top: 10px;
+    margin-top: 10pt;
 }
 
 img.logo {
@@ -20,6 +20,7 @@ img.logo {
 }
 
 body {
+    padding-top: 80pt;
     font-family:  Helvetica, sans-serif, Arial;
     color: #F6EDDF;
 }
@@ -56,32 +57,31 @@ body {
     font-size: 16pt;
 }
 
-.row:not(.schedule-row .row) {
-    padding-top: 15em;
-}
-
 .page {
     width: 100%;
     max-width: none;
-    padding-top: 7em;
-    padding-bottom: 70px;
+    padding-bottom: 30pt;
 }
 
 .page > .row, .page > .large-bg > .row {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
-    padding-top: 2em;
+    padding-top: 10pt;
 }
 
 @media (min-width: 992px) {
 
     .navbar .container, .navbar li {
-        height: 5em;
+        height: 80pt;
+    }
+
+    .navbar li a[href="#home"] {
+        padding-top: 40pt;
     }
 
     .navbar li a {
-        padding-top: 3em;
+        padding-top: 50pt;
     }
 
     .navbar-default .navbar-nav > li > .hover {
@@ -170,9 +170,6 @@ body {
 }
 
 @media (min-width: 1220px) {
-    .page {
-        min-height: 800px;
-    }
 
     body {
         transition: 0.5s ease;
@@ -193,7 +190,7 @@ body {
 }
 
 .company-logo {
-    height: 4em;
+    height: 60pt;
     width: auto;
 }
 
@@ -220,19 +217,19 @@ body {
 }
 
 .page-3 .encircled > * {
-    padding: 0.3em;
+    padding: 4pt;
 }
 
 .vk, .twitter {
-    padding: 1em !important;
+    padding: 12pt !important;
 }
 
 .pad-bottom {
-    padding-bottom: 2em;
+    padding-bottom: 20pt;
 }
 
 .pad-top {
-    padding-top: 4em !important;
+    padding-top: 20pt !important;
 }
 
 .thick {

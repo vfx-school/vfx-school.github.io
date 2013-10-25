@@ -20,7 +20,8 @@ $(function() {
 
 
     var scrollTo = function(pageId) {
-        $('html,body').animate({scrollTop: $(pageId).offset().top}, 'slow');
+        var navHeight = $("#navigation").outerHeight() - 20;
+        $('html,body').animate({scrollTop: $(pageId).offset().top - navHeight}, 'slow');
     }
 
 
@@ -89,11 +90,8 @@ $(function() {
             var ch = e.outerHeight();
             var max = Math.max(cw, ch) + 'px';
 
-            console.log(e, "w: " + cw, "h: " + ch);
-
             e.css({'min-height': max, 'min-width': max});
 
-            console.log(e, "w: " + cw, "h: " + ch);
         });
     }
 

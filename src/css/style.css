@@ -10,6 +10,15 @@ h3, .h3 {
     font-size: 16pt;
 }
 
+.no-bottom-margin {
+    margin-bottom: 0px !important;
+}
+
+
+.no-top-margin {
+    margin-top: 0px !important;
+}
+
 .page-2 .h3, .page-2 h3, .page-2 .h2, .page-2 h2 {
     margin-top: 10pt;
 }
@@ -20,7 +29,7 @@ img.logo {
 }
 
 body {
-    padding-top: 80pt;
+    padding-top: 70pt;
     font-family:  Helvetica, sans-serif, Arial;
     color: #F6EDDF;
 }
@@ -73,15 +82,15 @@ body {
 @media (min-width: 992px) {
 
     .navbar .container, .navbar li {
-        height: 80pt;
+        height: 73pt;
     }
 
     .navbar li a[href="#home"] {
-        padding-top: 40pt;
+        padding-top: 30pt;
     }
 
     .navbar li a {
-        padding-top: 50pt;
+        padding-top: 40pt;
     }
 
     .navbar-default .navbar-nav > li > .hover {
@@ -190,7 +199,7 @@ body {
 }
 
 .company-logo {
-    height: 60pt;
+    height: 50pt;
     width: auto;
 }
 
@@ -198,7 +207,6 @@ body {
     width: 100%;
     max-width: 5em;
     border-radius: 50%;
-    border: solid #F6EDDF 2px;
     vertical-align: middle;
     padding: 0px;
     display: table;
@@ -211,7 +219,7 @@ body {
 }
 
 .encircled > * {
-    padding: 1.2em;
+    padding: 12pt;
     display: table-cell;
     vertical-align: middle;
 }
@@ -228,10 +236,22 @@ body {
     padding-bottom: 20pt;
 }
 
+.bordered  {
+    border: solid #F6EDDF 2px;
+}
+
 .pad-top {
     padding-top: 20pt !important;
 }
 
 .thick {
     border-width: 3px;
+}
+
+.blue-bg {
+    background-color: #5c7b7f;
+}
+
+.broader-circle > * {
+    padding: 26pt !important;
 }

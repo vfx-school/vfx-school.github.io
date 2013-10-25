@@ -25,7 +25,7 @@ $(function() {
     }
 
 
-    $(".navbar-nav > li > a").each(function(index, element) {
+    $(".navbar-nav > li > a, .extra-link").each(function(index, element) {
         element = $(element);
         var hash = element[0].hash;
 

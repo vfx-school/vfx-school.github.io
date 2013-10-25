@@ -83,8 +83,18 @@ $(function() {
     });
 
     var resizeCircles = function() {
-        var cw = $('.circled, .encircled').outerWidth();
-        $('.circled, .encircled').css({'height':cw+'px'});
+        $('.circled, .encircled').each(function() {
+            var e = $(this);
+            var cw = e.outerWidth();
+            var ch = e.outerHeight();
+            var max = Math.max(cw, ch) + 'px';
+
+            console.log(e, "w: " + cw, "h: " + ch);
+
+            e.css({'min-height': max, 'min-width': max});
+
+            console.log(e, "w: " + cw, "h: " + ch);
+        });
     }
 
 

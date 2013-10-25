@@ -10,7 +10,7 @@ h3, .h3 {
     font-size: 20px;
 }
 
-.page-2 .h3, .page-2 h3 {
+.page-2 .h3, .page-2 h3, .page-2 .h2, .page-2 h2 {
     margin-top: 10px;
 }
 
@@ -197,29 +197,14 @@ body {
     width: auto;
 }
 
-.centered {
-    margin-left:auto;
-    margin-right:auto;
-}
-
-.circled {
-    font-size: 12pt;
-    width: 100%;
-    max-width: 5em;
-    border-radius: 50%;
-    background-color: #5c7b7f;
-    vertical-align: middle;
-    display: table-cell;
-}
-
 .encircled {
     width: 100%;
     max-width: 5em;
     border-radius: 50%;
     border: solid #F6EDDF 2px;
     vertical-align: middle;
-    display: table-cell;
     padding: 0px;
+    display: table;
 }
 
 @media(min-width: 1220px) {
@@ -228,9 +213,14 @@ body {
     }
 }
 
-.circled > p, .encircled > img {
+.encircled > * {
     padding: 1.2em;
-    margin-bottom: 0px;
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.page-3 .encircled > * {
+    padding: 0.3em;
 }
 
 .vk, .twitter {
@@ -243,4 +233,8 @@ body {
 
 .pad-top {
     padding-top: 4em !important;
+}
+
+.thick {
+    border-width: 3px;
 }

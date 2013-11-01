@@ -240,7 +240,7 @@ body {
     vertical-align: middle;
     padding: 0px;
     display: table;
-    font-size: 100%;
+    font-size: 120%;
 }
 
 @media (min-width: 1220px) {

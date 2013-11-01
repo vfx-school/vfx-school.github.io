@@ -87,14 +87,14 @@ $(function() {
         $('.encircled').each(function() {
             var e = $(this);
             var parent = e.parent();
-            var cw = parent.width() + 'px';
+            var parentWidth = parent.width();
+            var cw = parentWidth + 'px';
+            var eh = ((parentWidth) + 1 * e.css('border-width').replace(/[^-\d\.]/g, '')) + 'px';
 
-            var style = {'min-height': cw, 'max-width': cw, 'height': cw};
-
-            e.css(style);
-            e.children().each( function(style) { return function() {
-                $(this).css(style);
-            }}(style));
+            e.css({'min-height': eh, 'max-width': cw, 'height': eh});
+            e.children().each( function(cw) { return function() {
+                $(this).css({'min-height': cw, 'max-width': cw, 'height': cw});
+            }}(cw));
 
 
         });

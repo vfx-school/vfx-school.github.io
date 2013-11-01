@@ -88,7 +88,7 @@ $(function() {
             var e = $(this);
             var parent = e.parent();
             var parentWidth = parent.width();
-            var borderWidth = 1 * e.css('border-width').replace(/[^-\d\.]/g, '');
+            var borderWidth = 1 * e.css('border-bottom-width').replace(/[^-\d\.]/g, '');
             var topDim = parentWidth + 'px';
             var childDim = ((parentWidth) - borderWidth * 2) + 'px';
 

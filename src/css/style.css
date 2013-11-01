@@ -80,6 +80,7 @@ body {
 .page {
     width: 100%;
     max-width: none;
+    padding-bottom: 30pt;
 }
 
 .page > .row, .page > .large-bg > .row {
@@ -141,13 +142,17 @@ body {
     background-color: #a45958;
 }
 
+.page-1-arrow {
+    border-top-color: #a45958 !important;
+}
+
 .page-1 .navbar-default .navbar-nav > li > .hover,
 .page-1 .navbar-default .navbar-nav > li.active > a {
     background-color: #944948;
 }
 
 .page-2-arrow {
-    border-bottom-color: #987474 !important;
+    border-top-color: #987474 !important;
 }
 
 .page-2 {
@@ -160,7 +165,7 @@ body {
 }
 
 .page-3-arrow {
-    border-bottom-color: #ac916c !important;
+    border-top-color: #ac916c !important;
 }
 
 .page-3 {
@@ -177,7 +182,7 @@ body {
 }
 
 .page-4-arrow {
-    border-bottom-color: #5c7b7f !important;
+    border-top-color: #5c7b7f !important;
 }
 
 .page-4 .navbar-default .navbar-nav > li > .hover,
@@ -186,7 +191,7 @@ body {
 }
 
 .page-5-arrow {
-    border-bottom-color: #8b9076 !important;
+    border-top-color: #8b9076 !important;
 }
 
 .page-5 {
@@ -283,14 +288,14 @@ body {
     background-color: #5c7b7f;
 }
 
-.arrow-up {
+.arrow {
     padding-top: 20pt;
     width: 0;
     height: 0;
     border-left: 26pt solid transparent;
     border-right: 26pt solid transparent;
 
-    border-bottom: 20pt solid black;
+    border-top: 20pt solid black;
     margin-left: auto;
     margin-right: auto;
 }

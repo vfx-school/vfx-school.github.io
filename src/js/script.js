@@ -32,7 +32,7 @@ $(function() {
         element.click(function(hash) {return function(e) {
             e.preventDefault();
             scrollTo(hash);
-            history.pushState({ path: this.path }, '', this.href)
+            history.pushState(null, null, this.href);
         }}(hash));
 
         if(!handHeld) {
@@ -84,13 +84,18 @@ $(function() {
     });
 
     var resizeCircles = function() {
-        $('.circled, .encircled').each(function() {
+        $('.encircled').each(function() {
             var e = $(this);
-            var cw = e.outerWidth();
-            var ch = e.outerHeight();
-            var max = Math.max(cw, ch) + 'px';
+            var parent = e.parent();
+            var cw = parent.width() + 'px';
 
-            e.css({'min-height': max, 'min-width': max});
+            var style = {'min-height': cw, 'max-width': cw, 'height': cw};
+
+            e.css(style);
+            e.children().each( function(style) { return function() {
+                $(this).css(style);
+            }}(style));
+
 
         });
     }

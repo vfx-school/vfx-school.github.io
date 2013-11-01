@@ -88,17 +88,19 @@ $(function() {
             var e = $(this);
             var parent = e.parent();
             var parentWidth = parent.width();
-            var cw = parentWidth + 'px';
-            var eh = ((parentWidth) + 1 * e.css('border-width').replace(/[^-\d\.]/g, '')) + 'px';
+            var borderWidth = 1 * e.css('border-width').replace(/[^-\d\.]/g, '');
+            var topDim = parentWidth + 'px';
+            var childDim = ((parentWidth) - borderWidth * 2) + 'px';
 
-            e.css({'min-height': eh, 'max-width': cw, 'height': eh});
-            e.children().each( function(cw) { return function() {
-                $(this).css({'min-height': cw, 'max-width': cw, 'height': cw});
-            }}(cw));
+            e.css({'min-height': topDim, 'max-width': topDim, 'height': topDim});
+            e.children().each( function(dim) { return function() {
+                $(this).css({'min-height': dim, 'max-width': dim, 'height': dim, 'width': dim});
+            }}(childDim));
 
 
         });
     }
+
 
 
     $(window).resize(resizeCircles);
